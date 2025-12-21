@@ -45,7 +45,7 @@ class EleveController extends Controller
 
         $sante = ['groupe' => $request->groupe_sanguin, 'problemes' => $request->problemes, 'restrictions' => $request->restrictions, 'medicaments' => $request->medicaments];
 
-        $matricule = substr($request->nom, 0, 1) . explode(' ', $request->prenom)[0] . substr($annee, 0, 4);
+        $matricule = rand(0,100) . substr($request->nom, 0, 1) . explode(' ', $request->prenom)[0] . substr($annee, 0, 4);
 
         $classe = Classe::find($request->classe_id);
 
@@ -55,7 +55,7 @@ class EleveController extends Controller
 
         $classe_name_for_image_path = $classe_name_array[0] . $classe_name_array[1];
 
-
+        
 
         if ($request->file('profil')) {
             $profil = $request->file('profil')->storeAs($annee . '/' . $classe_name_for_image_path . '/' . $matricule . '.png');
