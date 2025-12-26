@@ -173,7 +173,7 @@
     \begin{flushleft}
     \hspace{0.05cm}
     \renewcommand{\arraystretch}{1.2}
-    \begin{tabular}{|p{9.5cm}|p{8.1cm}|}
+    \begin{tabular}{|p{9.5cm}|p{8.5cm}|}
 
     \hline
 
